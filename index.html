@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="fr">
+<html lang="en">
 
 <head>
     <meta charset="UTF-8">
@@ -9,11 +9,10 @@
 
     <!-- React CDN links -->
     <!-- @doc https://reactjs.org/docs/cdn-links.html -->
-    <script crossorigin src="https://unpkg.com/react@16/umd/react.development.js"></script>
-    <script crossorigin src="https://unpkg.com/react-dom@16/umd/react-dom.development.js"></script>
+    <script src="https://unpkg.com/react@16/umd/react.development.js"></script>
+    <script src="https://unpkg.com/react-dom@16/umd/react-dom.development.js"></script>
     <!-- Rabel CDN link stand alone version -->
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/babel-standalone/6.26.0/babel.js"></script>
-
+    <script src="https://unpkg.com/babel-standalone@6.15.0/babel.min.js"></script>
 </head>
 
 <body>
@@ -26,13 +25,28 @@
 
     <script type="text/babel">
 
-            ReactDOM.render(
-            <h1>Hello, world!</h1>,
-            document.getElementById('root')
-            );
+        // class
+        class App extends React.Component {
+
+            render(){
+
+                return(
+                    <div>
+                        <h1>Hello, world !</h1>
+                        <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit.</p>
+                    </div>                 
+                )
+            }
+        }
+
+        // render
+        ReactDOM.render(
+        <App />,
+        document.getElementById('root')
+        );
 
     </script>
-
+    
 </body>
 
 </html>
